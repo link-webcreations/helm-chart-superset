@@ -1,6 +1,87 @@
 apiVersion: v1
 entries:
+  postgresql:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 11.10.0
+    created: "2021-03-22T09:33:13.1151221+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.x.x
+    description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    digest: 9c2e185c08d74d1257b1e8a4eea9f512e3ab5e157132714292953ce110f90746
+    home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/bitnami-docker-postgresql
+    - https://www.postgresql.org/
+    urls:
+    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/charts/postgresql-10.2.0.tgz
+    version: 10.2.0
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.0.9
+    created: "2021-03-22T09:33:13.1177571+01:00"
+    description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+    digest: e6aa92279c396754505095ee6cbec480e51b60cf39385004b8b41d31096cdcf0
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    - http://redis.io/
+    urls:
+    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/charts/redis-12.3.0.tgz
+    version: 12.3.0
   superset:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2021-03-22T09:33:13.1111059+01:00"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.2.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.3.0
+    description: Apache Superset is a modern, enterprise-ready business intelligence web application
+    digest: 47a7f633c5fd00bcd56e4568e0b8e431444ab262cf039862e3e392042e3183b5
+    maintainers:
+    - email: cychiang0823@gmail.com
+      name: Chuan-Yen Chiang
+      url: https://github.com/cychiang
+    name: superset
+    urls:
+    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/superset-0.1.0.tgz
+    version: 0.1.0
   - apiVersion: v1
     appVersion: 0.28.1
     created: "2019-11-15T14:32:42.464693486Z"
@@ -20,4 +101,4 @@ entries:
     urls:
     - superset-1.1.8.tgz
     version: 1.1.8
-generated: "2019-11-15T14:32:42.463947984Z"
+generated: "2021-03-22T09:33:13.1025481+01:00"
