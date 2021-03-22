@@ -5,7 +5,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.10.0
-    created: "2021-03-22T09:33:13.1151221+01:00"
+    created: "2021-03-22T14:24:15.3263713+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -38,7 +38,7 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 6.0.9
-    created: "2021-03-22T09:33:13.1177571+01:00"
+    created: "2021-03-22T14:24:15.3292291+01:00"
     description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
     digest: e6aa92279c396754505095ee6cbec480e51b60cf39385004b8b41d31096cdcf0
     home: https://github.com/bitnami/charts/tree/master/bitnami/redis
@@ -62,7 +62,7 @@ entries:
   superset:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2021-03-22T09:33:13.1111059+01:00"
+    created: "2021-03-22T14:24:15.3225987+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -73,7 +73,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 12.3.0
     description: Apache Superset is a modern, enterprise-ready business intelligence web application
-    digest: 47a7f633c5fd00bcd56e4568e0b8e431444ab262cf039862e3e392042e3183b5
+    digest: f31b484e71a8089cb6599e87a5cf694e80c60d8db07791bf584a25cd56c05480
     maintainers:
     - email: cychiang0823@gmail.com
       name: Chuan-Yen Chiang
@@ -101,4 +101,4 @@ entries:
     urls:
     - superset-1.1.8.tgz
     version: 1.1.8
-generated: "2021-03-22T09:33:13.1025481+01:00"
+generated: "2021-03-22T14:24:15.3129767+01:00"
