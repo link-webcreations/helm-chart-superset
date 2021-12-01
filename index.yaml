@@ -5,12 +5,13 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 11.10.0
-    created: "2021-03-22T14:24:15.3263713+01:00"
+    created: "2021-12-01T16:46:44.836664621+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
       version: 1.x.x
-    description: Chart for PostgreSQL, an object-relational database management system (ORDBMS) with an emphasis on extensibility and on standards-compliance.
+    description: Chart for PostgreSQL, an object-relational database management system
+      (ORDBMS) with an emphasis on extensibility and on standards-compliance.
     digest: 9c2e185c08d74d1257b1e8a4eea9f512e3ab5e157132714292953ce110f90746
     home: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
     icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-110x117.png
@@ -38,9 +39,11 @@ entries:
       category: Database
     apiVersion: v2
     appVersion: 6.0.9
-    created: "2021-03-22T14:24:15.3292291+01:00"
-    description: Open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
-    digest: e6aa92279c396754505095ee6cbec480e51b60cf39385004b8b41d31096cdcf0
+    created: "2021-12-01T16:46:44.842278253+01:00"
+    description: Open source, advanced key-value store. It is often referred to as
+      a data structure server since keys can contain strings, hashes, lists, sets
+      and sorted sets.
+    digest: 28c53783e6473512cf72278cab0a50ac89b01deab7d1d47b906632c8c5e0d9ef
     home: https://github.com/bitnami/charts/tree/master/bitnami/redis
     icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
     keywords:
@@ -57,12 +60,12 @@ entries:
     - https://github.com/bitnami/bitnami-docker-redis
     - http://redis.io/
     urls:
-    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/charts/redis-12.3.0.tgz
-    version: 12.3.0
+    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/charts/redis-12.3.3.tgz
+    version: 12.3.3
   superset:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2021-03-22T14:24:15.3225987+01:00"
+    created: "2021-12-01T16:46:44.83360465+01:00"
     dependencies:
     - condition: postgresql.enabled
       name: postgresql
@@ -71,34 +74,16 @@ entries:
     - condition: redis.enabled
       name: redis
       repository: https://charts.bitnami.com/bitnami
-      version: 12.3.0
-    description: Apache Superset is a modern, enterprise-ready business intelligence web application
-    digest: f31b484e71a8089cb6599e87a5cf694e80c60d8db07791bf584a25cd56c05480
+      version: 12.3.3
+    description: Apache Superset is a modern, enterprise-ready business intelligence
+      web application
+    digest: 7153f8286812f47604aa95b84aafbb8d4ffe264bb2228ff47eb83f9af28eb210
     maintainers:
-    - email: cychiang0823@gmail.com
-      name: Chuan-Yen Chiang
-      url: https://github.com/cychiang
+    - email: craig@craigrueda.com
+      name: craig-rueda
+      url: https://github.com/craig-rueda
     name: superset
     urls:
-    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/superset-0.1.0.tgz
-    version: 0.1.0
-  - apiVersion: v1
-    appVersion: 0.28.1
-    created: "2019-11-15T14:32:42.464693486Z"
-    description: Apache Superset (incubating) is a modern, enterprise-ready business
-      intelligence web application
-    digest: 0b4622ae3063a258e3f0fc57f2f3e1889bd391048dc4454ae5fec514464a3e63
-    home: https://github.com/apache/incubator-superset
-    icon: https://superset.incubator.apache.org/_images/s.png
-    keywords:
-    - bi
-    maintainers:
-    - email: alitari67@gmail.com
-      name: alitari
-    name: superset
-    sources:
-    - https://github.com/apache/incubator-superset
-    urls:
-    - superset-1.1.8.tgz
-    version: 1.1.8
-generated: "2021-03-22T14:24:15.3129767+01:00"
+    - https://raw.githubusercontent.com/link-webcreations/helm-chart-superset/master/superset-0.4.0.tgz
+    version: 0.4.0
+generated: "2021-12-01T16:46:44.822276006+01:00"
