@@ -13,6 +13,7 @@ helm repo index . --url https://raw.githubusercontent.com/link-webcreations/helm
 cp index.yaml ~/git/helm-chart-superset
 cp superset-*.tgz ~/git/helm-chart-superset
 cd ~/git/helm-chart-superset
+git add superset-*.tgz
 git coa -m "feat(superset): Update version"
 git push
 helm repo update
