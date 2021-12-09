@@ -1,5 +1,7 @@
 # Update helm-chart-superset
 
+**DEPRECATED** Use this new and official repository: https://apache.github.io/superset
+
 ```bash
 mkdir -p ~/git && cd ~/git
 git clone https://github.com/link-webcreations/helm-chart-superset.git
